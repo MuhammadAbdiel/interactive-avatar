@@ -30,8 +30,8 @@ export default function InteractiveAvatar() {
   const [isLoadingRepeat, setIsLoadingRepeat] = useState(false);
   const [stream, setStream] = useState<MediaStream>();
   const [debug, setDebug] = useState<string>();
-  const [knowledgeId, setKnowledgeId] = useState<string>("ea46ba7fdf0d4e60a66ebab4d48914d2");
-  const [avatarId, setAvatarId] = useState<string>("c5c290e4a54444f7b57583682c463376");
+  const [knowledgeId, setKnowledgeId] = useState<string>("");
+  const [avatarId, setAvatarId] = useState<string>("");
   const [language, setLanguage] = useState<string>('en');
 
   const [data, setData] = useState<StartAvatarResponse>();
@@ -93,8 +93,7 @@ export default function InteractiveAvatar() {
         avatarName: avatarId,
         knowledgeId: knowledgeId, // Or use a custom `knowledgeBase`.
         voice: {
-          voiceId: 'k8F48nPW6GVasZMZaQvD',
-          rate: 1.0, // 0.5 ~ 1.5
+          rate: 1.5, // 0.5 ~ 1.5
           emotion: VoiceEmotion.EXCITED,
         },
         language: language,
