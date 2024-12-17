@@ -129,7 +129,7 @@ export default function InteractiveAvatar() {
     }
     // speak({ text: text, task_type: TaskType.REPEAT })
     await avatar.current
-      .speak({ text: text, taskType: TaskType.REPEAT, taskMode: TaskMode.SYNC })
+      .speak({ text: text, taskType: TaskType.TALK, taskMode: TaskMode.SYNC })
       .catch((e) => {
         setDebug(e.message);
       });
